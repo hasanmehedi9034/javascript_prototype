@@ -19,6 +19,11 @@ class Cricketer extends Person {
         this.country = country;
     }
 
+    eat() {
+        super.eat();
+        console.log('Hello  Mehedi');
+    }
+
     play() {
         console.log(`${this.name} can play Cricket`)
     }
@@ -39,9 +44,7 @@ class Cricketer extends Person {
 const sakib = new Cricketer('Sakib', 35, 'All rounder', 'Bangladesh');
 const tamim = new Cricketer('Tamim', 35, 'Batsman', 'Bangladesh');
 
-sakib.setName = 'Mehedi';
-
-console.log(Cricketer.isEqualAge(sakib, tamim));
+sakib.eat();
 
 
 
