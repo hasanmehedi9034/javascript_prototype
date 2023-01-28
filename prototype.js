@@ -33,7 +33,17 @@ function Person(name, age) {
     return person;
 }
 
-Person.prototype = {
+function PersonWith(name, age) {
+    // let this = Object.create(Person.prototype);
+
+    this.name = name;
+    this.age = age;
+    this.country = 'Bangladesh'
+
+    // return this;
+}
+
+PersonWith.prototype = {
     eat() {
         console.log('Person is eating');
     },
@@ -48,7 +58,10 @@ Person.prototype = {
 const sakib = Person('Sakib', 32);
 const tamim = Person('Tamin', 32);
 
-sakib.play();
+const sakib1 = new PersonWith('Sakib', 32);
+const tamim2 = new PersonWith('Tamin', 32);
+
+console.log(sakib1.country);
 
 // function test() {
 
