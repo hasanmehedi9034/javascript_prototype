@@ -30,12 +30,18 @@ class Cricketer extends Person {
     set setName(name) { // setter function 
         this.name = name;
     }
+
+    static isEqualAge(a, b) {
+        return a.age === b.age
+    }
 }
 
 const sakib = new Cricketer('Sakib', 35, 'All rounder', 'Bangladesh');
+const tamim = new Cricketer('Tamim', 35, 'Batsman', 'Bangladesh');
+
 sakib.setName = 'Mehedi';
 
-console.log(sakib)
+console.log(Cricketer.isEqualAge(sakib, tamim));
 
 
 
